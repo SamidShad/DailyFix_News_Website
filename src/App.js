@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Headlines from "./Components/Headlines/Headlines";
+import NewsContainer from "./Components/NewsContainer/NewsContainer";
+import Footer from "./Components/Footer/Footer";
+import { useState, createContext } from "react";
+
+const contextCategory = createContext();
 
 function App() {
+  const [category, setCategory] = useState("all");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <contextCategory.Provider value={{ category, setCategory }}>
+        <Navbar />
+        <Headlines />
+        <NewsContainer />
+        <Footer />
+      </contextCategory.Provider>
+    </>
   );
 }
 
 export default App;
+export { contextCategory };
