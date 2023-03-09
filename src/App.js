@@ -10,6 +10,10 @@ const contextCategory = createContext();
 function App() {
   const [category, setCategory] = useState("all");
 
+document.addEventListener("contextmenu", (event) => {
+  event.preventDefault();
+});
+  
   return (
     <>
       <contextCategory.Provider value={{ category, setCategory }}>
