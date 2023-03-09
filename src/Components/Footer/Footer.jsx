@@ -6,9 +6,7 @@ function Footer() {
     <>
       <footer className="footer">
         <div className="footer_elements_container">
-          <h1 className="footer-logo">
-            <a href="../.././public/index.html">DailyFix</a>
-          </h1>
+          <h1 className="footer-logo">DailyFix</h1>
           <div className="social-medias-links">
             <i className="fa-brands fa-linkedin-in social-icons"></i>
             <i className="fa-brands fa-instagram social-icons"></i>
