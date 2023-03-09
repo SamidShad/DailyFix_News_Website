@@ -17,9 +17,7 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <a className="nav-logo" href="../.././public/index.html">
-          DailyFix
-        </a>
+        <p className="nav-logo">DailyFix</p>
         <ul className="nav-links">
           <li onClick={() => changeCategory("all")}>All</li>
           <li onClick={() => changeCategory("sports")}>Sports</li>
